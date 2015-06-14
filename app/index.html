@@ -7,51 +7,27 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="/favicon.ico">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
     <link rel="stylesheet" href="../bower_components/css-toggle-switch/dist/toggle-switch.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <link href='http://fonts.googleapis.com/css?family=Cabin:400,700' rel='stylesheet' type='text/css'>
-    <!-- endbuild -->
-</head>
+    <link href='http://fonts.googleapis.com/css?family=Cabin:400,700' rel='stylesheet' type='text/css'> </head>
 
 <body>
-
-
-    
-    <form id="formulario" class="big-form">
-        
+    <form id="formulario" class="big-form" method="POST" action="./php/enviar.php" novalidate>
         <div class="wrap">
-
-        <h3>Datos personales</h3>
+            <h3>Datos personales</h3>
             <div>
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre" />
-                <span class="required"></span>
-            </div>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre" /> <span class="required"></span> </div>
             <div>
-                <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" />
-                <span class="required"></span>
-            </div>
+                <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" /> <span class="required"></span> </div>
             <div>
-                <input maxlength="9" type="text" name="telefono" id="telefono" placeholder="Teléfono" />
-                <span class="required"></span>
-            </div>
+                <input maxlength="9" type="text" name="telefono" id="telefono" placeholder="Teléfono" /> <span class="required"></span> </div>
             <div>
-                <input type="mail" name="email" id="email" placeholder="E-mail" />
-                <span class="required"></span>
-            </div>
+                <input type="mail" name="email" id="email" placeholder="E-mail" /> <span class="required"></span> </div>
             <div>
-                <input type="mail" name="email2" id="email2" placeholder="Repita su E-mail" />
-                <span class="required"></span>
-            </div>
+                <input type="mail" name="email2" id="email2" placeholder="Repita su E-mail" /> <span class="required"></span> </div>
         </div>
-        
         <div class="wrap">
-        <h3>¿De que nos conoces?</h3>
+            <h3>¿De que nos conoces?</h3>
             <div>
                 <select name="refered" id="refered">
                     <option value="0">Prefiero no contestar</option>
@@ -62,116 +38,66 @@
                 </select>
             </div>
         </div>
-        
-
-       
         <div class="radius">
-  <label class="col-md-4 control-label" for="demandante"><h3>Demandante: </h3></label>
-  <div class="col-md-4">
-    <select id="demandante" name="demandante" class="form-control">
-      <option value="1">Particular</option>
-      <option value="2">Empresa</option>
-    </select>
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="wrap">
-  <h3>Datos de facturacion: </h3>
-              <div class="col-md-4">
-              <input id="nif" name="nif" type="text" placeholder="NIF" class="form-control input-md"  >
-                
-              </div>
-              
-                <input type="text" name="facturacionNombre" id="facturacionNombre" placeholder="Nombre completo" />
-                <span class="required"></span>
-           
-            <div>
-                <input id="pais" name="pais" required="" type="text" placeholder="Pais" class="form-control input-md"  >
-            </div>
-             <div>
-                <input maxlength="5" type="text" name="cp" id="cp" placeholder="Código Postal" />
-                <span class="required"></span>
-            </div>
-             <div id="provincias">
-               <input id="provincia" name="provincia" disabled="true" type="text" placeholder="provincias" class="form-control input-md"  >
-               <span class="required"></span>
-            </div>
-            <div id="loc">
-                <select id="localidad" required="" name="localidad" class="form-control">
-     
-     
-    </select>
-                <span class="required"></span>
-            </div>
-            <div>
-                <input type="text" name="direccion" id="direccion" placeholder="Dirección" />
-                <span class="required"></span>
-            </div>
-            <div>
-                <input type="text" name="iban" id="iban" placeholder="IBAN" />
-                <span class="required"></span>
+            <label class="col-md-4 control-label" for="demandante">
+                <h3>Demandante: </h3></label>
+            <div class="col-md-4">
+                <select id="demandante" name="demandante" class="form-control">
+                    <option value="1">Particular</option>
+                    <option value="2">Empresa</option>
+                </select>
             </div>
         </div>
-
-        
-        <div class="radius">
-        <label class="col-md-4 control-label" for="pago">Tipo de Pago:</label>
-  <div class="col-md-4">
-            <select id="Pago" name="Pago"  class="form-control">
-          <option>Mensual</option>
-          <option>Trimestral</option>
-          <option>Anual</option>
-        </select>
-        </div>
-
-        </div>
-        </div>
-      
-        
         <div class="wrap">
-        <h3>Datos de usuario</h3>
+            <h3>Datos de facturacion: </h3>
+            <div class="col-md-4">
+                <input id="nif" name="nif" type="text" placeholder="NIF" class="form-control input-md"> </div>
+            <input type="text" name="facturacionNombre" id="facturacionNombre" placeholder="Nombre completo" /> <span class="required"></span>
             <div>
-                <input type="text" name="usuario" id="usuario" readonly placeholder="Nombre de usuario" />
-                <span class="required"></span>
-            </div>
+                <input id="pais" name="pais" required="" type="text" placeholder="Pais" class="form-control input-md"> </div>
             <div>
-                <input type="password" name="password" id="pass" placeholder="Contraseña" />
-                
-                <span class="required"></span>
-             <meter value="0" id="PassValue"  low="30" high="7" min="0" max="100"></meter>
-                <input type="password" name="pass2" id="pass2" placeholder="Repita su Contraseña" />
-                
-                <span class="required"></span>
-            </div>
-        
-        
-           <div class="center"> 
-            <input type="submit" value="Finalizar" name="submit" class="botenv"/>
-            </div> 
-          
+                <input maxlength="5" type="text" name="cp" id="cp" placeholder="Código Postal" /> <span class="required"></span> </div>
+            <div id="provincias">
+                <input id="provincia" name="provincia" disabled="true" type="text" placeholder="provincias" class="form-control input-md"> <span class="required"></span> </div>
+            <div id="loc">
+                <select id="localidad" required="" name="localidad" class="form-control"> </select> <span class="required"></span> </div>
+            <div>
+                <input type="text" name="direccion" id="direccion" placeholder="Dirección" /> <span class="required"></span> </div>
+            <div>
+                <input type="text" name="iban" id="iban" placeholder="IBAN" /> <span class="required"></span> </div>
         </div>
-
+        <div class="radius">
+            <label class="col-md-4 control-label" for="Pago">Tipo de Pago:</label>
+            <div class="col-md-4">
+                <select id="Pago" name="Pago" class="form-control">
+                    <option>Mensual</option>
+                    <option>Trimestral</option>
+                    <option>Anual</option>
+                </select>
+            </div>
+        </div>
+        </div>
+        <div class="wrap">
+            <h3>Datos de usuario</h3>
+            <div>
+                <input type="text" name="usuario" id="usuario" readonly placeholder="Nombre de usuario" /> <span class="required"></span> </div>
+            <div>
+                <input type="password" name="password" id="pass" placeholder="Contraseña" /> <span class="required"></span>
+                <meter value="0" id="PassValue" low="30" high="7" min="0" max="100"></meter>
+                <input type="password" name="pass2" id="pass2" placeholder="Repita su Contraseña" /> <span class="required"></span> </div>
+            <div class="center">
+                <input type="submit" value="Finalizar" name="submit" class="botenv" /> </div>
+        </div>
     </form>
-
-
-
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/jquery-validate/dist/jquery.validate.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-
-    <!-- build:js({app,.tmp}) scripts/main.js -->
     <script src="scripts/main.js"></script>
-        <script src="scripts/iban.js"></script>
-        <script src="scripts/cifES.js"></script>        
-        <script src="scripts/nifES.js"></script>
-        <script src="scripts/jquery.complexify.banlist.js"></script>
-        <script src="scripts/jquery.complexify.js"></script>
-        <script src="scripts/mesagges_es.js"></script>
-    <!-- endbuild -->
+    <script src="scripts/iban.js"></script>
+    <script src="scripts/cifES.js"></script>
+    <script src="scripts/nifES.js"></script>
+    <script src="scripts/jquery.complexify.banlist.js"></script>
+    <script src="scripts/jquery.complexify.js"></script>
+    <script src="scripts/mesagges_es.js"></script>
 </body>
 
 </html>
